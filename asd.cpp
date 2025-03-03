@@ -1,12 +1,14 @@
 #include <iostream>
+#include <cstdlib> // For rand() and srand()
+#include <ctime>   // For time()
 int main()
 {
   std::cout << "ASMR" << std::endl;
   
   std::cout << "Let's play a quick guessing game!\n";
     
-    std::srand(std::time(0));
-    int secretNumber = std::rand() % 10 + 1;
+    std::srand(std::time(0)); // Seed random number
+    int secretNumber = std::rand() % 10 + 1; // Random number between 1 and 10
     int guess;
 
     std::cout << "Guess a number between 1 and 10: ";
